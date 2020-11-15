@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot rpa="false" generated="20201115 19:15:30.211" generator="Robot 3.2.2 (Python 2.7.17 on linux2)">
+<suite source="/home/lucasneves/Documents/Projects/Will/Tests" id="s1" name="Tests">
+<suite source="/home/lucasneves/Documents/Projects/Will/Tests/Login.robot" id="s1-s1" name="Login">
+<test id="s1-s1-t1" name="Login Sucesso">
+<kw type="setup" name="Abrir Browser" library="Resources">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+</arguments>
+<msg timestamp="20201115 19:15:30.301" level="INFO">Opening browser 'Chrome' to base url 'http://automationpractice.com/index.php?controller=authentication&amp;;back=my-account'.</msg>
+<status status="PASS" endtime="20201115 19:15:35.598" starttime="20201115 19:15:30.301"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" endtime="20201115 19:15:35.731" starttime="20201115 19:15:35.599"></status>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<arguments>
+<arg>${delay}</arg>
+</arguments>
+<status status="PASS" endtime="20201115 19:15:35.732" starttime="20201115 19:15:35.731"></status>
+</kw>
+<kw name="Validar Home Page" library="Resources">
+<kw name="Title Should Be" library="SeleniumLibrary">
+<doc>Verifies that the current page title equals ``title``.</doc>
+<arguments>
+<arg>Login - My Store</arg>
+</arguments>
+<msg timestamp="20201115 19:15:35.743" level="INFO">Page title is 'Login - My Store'.</msg>
+<status status="PASS" endtime="20201115 19:15:35.743" starttime="20201115 19:15:35.734"></status>
+</kw>
+<status status="PASS" endtime="20201115 19:15:35.743" starttime="20201115 19:15:35.733"></status>
+</kw>
+<status status="PASS" endtime="20201115 19:15:35.744" starttime="20201115 19:15:30.300"></status>
+</kw>
+<kw name="Estou na Home Page" library="HomePage">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${emailCreate_field}</arg>
+</arguments>
+<status status="PASS" endtime="20201115 19:15:35.792" starttime="20201115 19:15:35.745"></status>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>${emailCreate_field}</arg>
+</arguments>
+<msg timestamp="20201115 19:15:35.826" level="INFO">Element '//*[@type='text' and @id='email_create']' is displayed.</msg>
+<status status="PASS" endtime="20201115 19:15:35.826" starttime="20201115 19:15:35.792"></status>
+</kw>
+<status status="PASS" endtime="20201115 19:15:35.826" starttime="20201115 19:15:35.744"></status>
+</kw>
+<kw name="Inserir Email Login" library="HomePage">
+<arguments>
+<arg>${emailLoginValido}</arg>
+</arguments>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${emailLogin_field}</arg>
+</arguments>
+<status status="PASS" endtime="20201115 19:15:35.878" starttime="20201115 19:15:35.827"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${emailLogin_field}</arg>
+<arg>${email}</arg>
+</arguments>
+<msg timestamp="20201115 19:15:35.880" level="INFO">Typing text 'lucasneves@hotmail.com' into text field '//*[@type='text' and @id='email']'.</msg>
+<status status="PASS" endtime="20201115 19:15:36.122" starttime="20201115 19:15:35.879"></status>
+</kw>
+<status status="PASS" endtime="20201115 19:15:36.123" starttime="20201115 19:15:35.826"></status>
+</kw>
+<kw name="Inserir Password Login" library="HomePage">
+<arguments>
+<arg>${senhaLoginValido}</arg>
+</arguments>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${senhaLogin_field}</arg>
+</arguments>
+<status status="PASS" endtime="20201115 19:15:36.186" starttime="20201115 19:15:36.125"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${senhaLogin_field}</arg>
+<arg>${password}</arg>
+</arguments>
+<msg timestamp="20201115 19:15:36.187" level="INFO">Typing text 'PASSWORD' into text field '//*[@type='password' and @id='passwd']'.</msg>
+<status status="PASS" endtime="20201115 19:15:36.353" starttime="20201115 19:15:36.187"></status>
+</kw>
+<status status="PASS" endtime="20201115 19:15:36.354" starttime="20201115 19:15:36.123"></status>
+</kw>
+<kw name="Clicar Sign In" library="HomePage">
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${emailCreate_field}</arg>
+</arguments>
+<status status="PASS" endtime="20201115 19:15:36.396" starttime="20201115 19:15:36.355"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>${signIn_button}</arg>
+</arguments>
+<msg timestamp="20201115 19:15:36.397" level="INFO">Clicking button '//*[@type='submit' and @id='SubmitLogin']'.</msg>
+<status status="PASS" endtime="20201115 19:15:37.932" starttime="20201115 19:15:36.396"></status>
+</kw>
+<status status="PASS" endtime="20201115 19:15:37.932" starttime="20201115 19:15:36.354"></status>
+</kw>
+<kw name="Estou na MyAccount Page" library="MyAccountPage">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${myaccountPage}</arg>
+</arguments>
+<status status="PASS" endtime="20201115 19:15:37.956" starttime="20201115 19:15:37.933"></status>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>${myaccountPage}</arg>
+</arguments>
+<msg timestamp="20201115 19:15:37.973" level="INFO">Element '//*[@class='page-heading' and text()='My account']' is displayed.</msg>
+<status status="PASS" endtime="20201115 19:15:37.974" starttime="20201115 19:15:37.956"></status>
+</kw>
+<status status="PASS" endtime="20201115 19:15:37.974" starttime="20201115 19:15:37.932"></status>
+</kw>
+<kw name="Desconectar Usuario" library="MyAccountPage">
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${signOut_Button}</arg>
+</arguments>
+<status status="PASS" endtime="20201115 19:15:37.998" starttime="20201115 19:15:37.974"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${signOut_Button}</arg>
+</arguments>
+<msg timestamp="20201115 19:15:37.998" level="INFO">Clicking element '//*[@class='logout' and @title='Log me out']'.</msg>
+<status status="PASS" endtime="20201115 19:15:40.398" starttime="20201115 19:15:37.998"></status>
+</kw>
+<status status="PASS" endtime="20201115 19:15:40.399" starttime="20201115 19:15:37.974"></status>
+</kw>
+<kw type="teardown" name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20201115 19:15:40.465" starttime="20201115 19:15:40.399"></status>
+</kw>
+<tags>
+<tag>LoginSucesso</tag>
+<tag>Smoke Test</tag>
+</tags>
+<status status="PASS" endtime="20201115 19:15:40.465" critical="yes" starttime="20201115 19:15:30.300"></status>
+</test>
+<status status="PASS" endtime="20201115 19:15:40.467" starttime="20201115 19:15:30.226"></status>
+</suite>
+<status status="PASS" endtime="20201115 19:15:40.470" starttime="20201115 19:15:30.212"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="1">Critical Tests</stat>
+<stat fail="0" pass="1">All Tests</stat>
+</total>
+<tag>
+<stat fail="0" pass="1">LoginSucesso</stat>
+<stat fail="0" pass="1">Smoke Test</stat>
+</tag>
+<suite>
+<stat fail="0" id="s1" name="Tests" pass="1">Tests</stat>
+<stat fail="0" id="s1-s1" name="Login" pass="1">Tests.Login</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
