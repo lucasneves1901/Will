@@ -32,13 +32,6 @@ $ robot -d ./log ./Tests
 # Casos de Testes
 ##Cenários para Criação de Conta
 
-Caso Teste  	| Dados 							| Nome
-CT01		| EMAIL BRANCO 							| Cadastro sem sucesso email em branco
-CT02		| EMAIL VALIDO + DADOS EM BRANCO 				| Cadastro sem sucesso email valido mas com dados em branco
-CT03		| EMAIL VALIDO + INVALIDOS 					| Cadastro sem sucesso email valido mas com dados invalidos
-CT04		| EMAIL VALIDO + VALIDO 					| Cadastro com sucesso email valido e dados validos
-CT05		| EMAIL EXISTENTE 						| Cadastro sem sucesso email existente
-
 ##CT01
 ##Criterios de Aceitação
 > Campo EMAIL deve conter uma mensagem de erro caso não seja preenchido
@@ -65,12 +58,6 @@ CT05		| EMAIL EXISTENTE 						| Cadastro sem sucesso email existente
 > Após tentativa de cadastro deverá ser exibida uma mensagem contendo o texto "An account using this email address has already been registered. Please enter a valid password or request a new one."
 
 ##Cenários para Login no Sistema
-
-Caso Teste  	| Login 	| Senha		| Nome
-CT01		| BRANCO	| BRANCO	| Login sem sucesso credenciais em branco
-CT02		| INVALIDO	| INVALIDO	| Login sem Sucesso credenciais invalidas
-CT03		| VALIDO	| INVALIDO	| Login sem sucesso senha incorreta
-CT04		| VALIDO	| VALIDO	| Login com sucesso credenciais validas
 
 ##CT01
 ##Criterios de Aceitação
